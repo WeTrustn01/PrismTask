@@ -71,5 +71,5 @@ this will allow interacting with the models without working routes
 
 Currently the application does not handle invalid input: i.e direction and currency can be any strings
 
-##Justification for design
+## Justification for design
 Application code has been modularised to some extent in order to simulate a real project. Migrations used so that changes to databases can be inspected before being pushed to a production server.
