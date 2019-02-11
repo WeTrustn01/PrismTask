@@ -7,39 +7,39 @@ The following installation can be done on macOS 10.14.3 or similar UNIX systems
 
 ### Prerequisites and Installation
 applications works with the following version of python, but older versions might be supported
-'''
+```
 python 3.7.0
-'''
+```
 (OPTIONAL) Create a python virtual environment:
-'''
+```
 python3 -m venv venv
 virtualenv venv
 source venv/bin/activate
-'''
+```
 All required python packages can be installed using requirements.txt:
-'''
+```
 pip3 install -r requirements.txt
-'''
+```
 To start the application run:
-'''
+```
 python3 -m flask db init
 python3 -m flask db init
 python3 -m flask db migrate -m "trades table"
 python3 -m flask db upgrade
 python3 -m flask run
-'''
+```
 NOTE: You will have to change database configuration in /app/__init__.py:
-'''
+```
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://USER:PASSWORD@localhost/DATABASE_NAME'
-'''
+```
 Replace capitalised with your own details
 pg_start.sh and pg_stop.sh are scripts to start or stop the postgresql server on macOS
 
 ### Using Docker
-'''
+```
 docker build -t prism:latest .
 docker run --name prism -d -p 8000:5000 --rm microblog:latest
-'''
+```
 You will communicate with the application using port 8000. This can be changed
 
 NOTE: This has not been tested!
@@ -47,7 +47,7 @@ NOTE: This has not been tested!
 ##Tests
 Application was tested using Postman.
 E.g:
-'''
+```
 POST http://localhost:5000/trades
 post the following form data: currency - USD; quantity - 1000; direction - SELL
 
@@ -62,11 +62,11 @@ update trade with id=1 in JSON format with the following form data: currency - U
 
 DELETE http://localhost:5000/trades/1
 delete trade with id=1 in JSON format
-'''
+```
 Can also test using:
-'''
+```
 flask shell
-'''
+```
 this will allow interacting with the models without working routes
 
 Currently the application does not handle invalid input: i.e direction and currency can be any strings
