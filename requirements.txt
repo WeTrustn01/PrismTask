@@ -1,0 +1,13 @@
+alembic==1.0.7
+Click==7.0
+Flask==1.0.2
+flask-marshmallow==0.9.0
+Flask-Migrate==2.3.1
+Flask-SQLAlchemy==2.3.2
+marshmallow==3.0.0rc4
+marshmallow-sqlalchemy==0.16.0
+passlib==1.7.1
+python-dateutil==2.8.0
+python-dotenv==0.10.1
+python-editor==1.0.4
+SQLAlchemy==1.2.17
