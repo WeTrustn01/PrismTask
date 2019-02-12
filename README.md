@@ -44,7 +44,7 @@ You will communicate with the application using port 8000. This can be changed
 
 NOTE: This has not been tested!
 
-##Tests
+## Tests
 Application was tested using Postman.
 E.g:
 ```
